@@ -1,0 +1,29 @@
+@use '../variebles';
+
+.button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;//n deixa haver quebra de linha
+
+    &--primary { //pra estilizar o unico botao
+        color: #fff;
+        background-color: variebles.$purple;
+    }
+
+    @media (max-width:640px){
+        display: block;
+        width: 100%;
+    }
+
+    @media (max-width:1024px) { //tablet align o texto do butao
+        display: flex;
+        align-items: center;
+    }
+}
+
+//OBS:. quando usamos o display flex ele faz de tudo pros itens ficar lado a lado msm q fique tudo colado um no outro ela por padrao tem um elemento
+//flex-wrap:nowrap q força os elemntos ficarem um ao lado do outro e wrap ele vai ocupar toda linha se n tiver espaço ele quebra a linha pra continuar
+//abaixo
